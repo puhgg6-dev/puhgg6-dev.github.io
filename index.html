@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星空主題網頁</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            overflow-x: hidden;
+        }
+        .stars {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 80px auto 0 auto;
+            background: rgba(30, 34, 54, 0.85);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(30, 34, 54, 0.28);
+            padding: 48px 40px 36px 40px;
+            text-align: center;
+            border: 2px solid #3a4668;
+        }
+        .star-header {
+            font-size: 2.8em;
+            color: #fffbe7;
+            letter-spacing: 0.1em;
+            margin-bottom: 18px;
+            font-family: 'Noto Sans TC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 0 2px 16px #fffbe7cc, 0 2px 8px #3a4668;
+        }
+        .star-divider {
+            width: 80px;
+            height: 6px;
+            background: linear-gradient(90deg, #fffbe7 0%, #3a4668 100%);
+            border-radius: 3px;
+            margin: 0 auto 32px auto;
+            box-shadow: 0 2px 8px #fffbe744;
+        }
+        .star-desc {
+            color: #e0e6f7;
+            font-size: 1.25em;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        .star-btn {
+            display: inline-block;
+            padding: 14px 38px;
+            background: linear-gradient(90deg, #3a4668 0%, #fffbe7 100%);
+            color: #1b2735;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-family: 'Noto Sans TC', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 4px 16px #fffbe744;
+            text-decoration: none;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .star-btn:hover {
+            background: linear-gradient(90deg, #fffbe7 0%, #3a4668 100%);
+            color: #fffbe7;
+            box-shadow: 0 6px 24px #fffbe744;
+        }
+        .star-footer {
+            margin-top: 48px;
+            color: #fffbe7;
+            font-size: 1em;
+            opacity: 0.7;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas class="stars"></canvas>
+    <div class="container">
+        <div class="star-header">星空主題網頁</div>
+        <div class="star-divider"></div>
+        <div class="star-desc">
+            這是一個以星空為主題、充滿夢幻感的網頁範例。<br>
+            適合用於展示創意、品牌形象或個人作品集。<br>
+            你可以根據需求進一步自訂內容與功能。
+        </div>
+        <a href="#" class="star-btn">立即探索</a>
+        <div class="star-footer">&copy; 2025 星空主題網頁設計 | 由 GitHub Copilot 生成</div>
+    </div>
+    <script>
+        // 星空動畫
+        const canvas = document.querySelector('.stars');
+        const ctx = canvas.getContext('2d');
+        let w, h, stars = [];
+        function resize() {
+            w = window.innerWidth;
+            h = window.innerHeight;
+            canvas.width = w;
+            canvas.height = h;
+        }
+        function Star() {
+            this.x = Math.random() * w;
+            this.y = Math.random() * h;
+            this.radius = Math.random() * 1.2 + 0.2;
+            this.alpha = Math.random() * 0.5 + 0.5;
+            this.dx = (Math.random() - 0.5) * 0.05;
+            this.dy = (Math.random() - 0.5) * 0.05;
+        }
+        Star.prototype.draw = function() {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = '#fffbe7';
+            ctx.shadowColor = '#fffbe7';
+            ctx.shadowBlur = 8;
+            ctx.fill();
+            ctx.restore();
+        };
+        Star.prototype.update = function() {
+            this.x += this.dx;
+            this.y += this.dy;
+            if(this.x < 0 || this.x > w) this.dx *= -1;
+            if(this.y < 0 || this.y > h) this.dy *= -1;
+        };
+        function createStars(num) {
+            stars = [];
+            for(let i=0; i<num; i++) {
+                stars.push(new Star());
+            }
+        }
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            for(let star of stars) {
+                star.update();
+                star.draw();
+            }
+            requestAnimationFrame(animate);
+        }
+        window.addEventListener('resize', () => {
+            resize();
+            createStars(Math.floor(w * h / 1800));
+        });
+        resize();
+        createStars(Math.floor(w * h / 1800));
+        animate();
+    </script>
+</body>
+</html>

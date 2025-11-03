@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+        /* GUSHION區塊橫向排列 */
+        .gushion-flex {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .gushion-flex .gushion-img {
+            width: 30%;
+            min-width: 220px;
+            max-width: 320px;
+        }
+        .gushion-flex .gushion-desc {
+            flex: 1 1 320px;
+            max-width: 700px;
+            min-width: 220px;
+        }
+        @media (max-width: 800px) {
+            .gushion-flex {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            .gushion-flex .gushion-img, .gushion-flex .gushion-desc {
+                width: 90%;
+                max-width: 98vw;
+            }
+        }
+        /* BAEL區塊橫向排列 */
+        .bael-flex {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .bael-flex .bael-img {
+            width: 30%;
+            min-width: 220px;
+            max-width: 320px;
+        }
+        .bael-flex .c04y4wu3 {
+            flex: 1 1 320px;
+            max-width: 700px;
+            min-width: 220px;
+        }
+        @media (max-width: 800px) {
+            .bael-flex {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            .bael-flex .bael-img, .bael-flex .c04y4wu3 {
+                width: 90%;
+                max-width: 98vw;
+            }
+        }
+        body {
+            min-height: 100vh;
+            background: url('tragic.jpg') center center/cover no-repeat fixed;
+            position: relative;
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(30, 30, 30, 0.6);
+            z-index: 0;
+        }
+        .w3-container, .w3-bar, .w3-card {
+            position: relative;
+            z-index: 1;
+        }
+        /* 首頁區塊美化 */
+        #home-section {
+            margin-top: 80px;
+            display: block;
+            text-align: center;
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;
+        }
+        #home-section h1 {
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+        #home-section p {
+            color: #e0e0e0;
+            font-size: 1.3em;
+            margin-bottom: 1.5em;
+            font-weight: 400;
+        }
+        #home-section img[onclick] {
+            width: 120px;
+            cursor: pointer;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            background: transparent;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        #home-section img[onclick]:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-dark-grey w3-wide w3-padding w3-card" style="background:#222 !important; color:#fff !important;">
+            <a href="#home" class="w3-bar-item w3-button" style="color:#fff;"><b>GUNDAM</b> Iron <span style="color:#8B0000;font-weight:bold;">Blooded</span> Orphans</a>
+            <div class="w3-right w3-hide-small">
+                <a href="#" class="w3-bar-item w3-button" style="color:#fff;" onclick="showSection('bael')">BAEL</a>
+                <a href="#" class="w3-bar-item w3-button" style="color:#fff;" onclick="showSection('gushion')">GUSHION</a>
+                <a href="#" class="w3-bar-item w3-button" style="color:#fff;" onclick="showSection('marchosias')">MARCHOSIAS</a>
+            </div>
+        </div>
+    </div>
+
+
+<div id="home-section" class="w3-container" style="margin-top:70px; display:block; text-align:center; font-family:'Microsoft JhengHei', Arial, sans-serif;">
+    <h1>歡迎來到<br>GUNDAM Iron <span style="color:#8B0000;font-weight:bold;">Blooded</span> Orphans</h1>
+    <p>點擊下方圖片進入主頁</p>
+    <img src="mark.jpg" alt="進入主頁" onclick="enterMain()" />
+</div>
+<div id="bael-section" class="w3-container" style="margin-top:70px; display:none;">
+    <div class="bael-flex">
+        <img src="bael.jpg" class="w3-image bael-img" style="margin-bottom: 30%">
+    <div class="c04y4wu3" style="background:rgba(34,34,34,0.85); border-radius:18px; padding:32px 28px 24px 28px; color:#f5f5f5; font-size:1.18em; line-height:1.9; font-family:'Noto Sans TC','Microsoft JhengHei',Arial,sans-serif; box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+            <b style="font-size:1.35em; color:#8B0000; letter-spacing:1px; font-family:'FangSong','SimFang',serif;">鋼彈・巴耶爾（Gundam Bael）</b>象徵著力量與支配的原初象徵。作為「七十二機鋼彈」中最早被啟動的一機，巴耶爾是三百年前「厄祭戰爭」時期由阿格尼卡‧卡伊魯魯（Agnika Kaieru）所駕駛的傳說之機。它不僅是技術的結晶，更是權力與信仰的象徵。阿格尼卡以這台機體終結了人類與機械之間的戰爭，並以其名義建立了「格耶爾霍恩（Gjallarhorn）」制度。自此，巴耶爾被視為「神機」，其出現象徵著統治的正統性。<br><br>
+            在劇中後期，格耶爾霍恩的現任領袖<b>麥吉利斯・法利德（McGillis Fareed）</b>為了改變腐敗的體制，奪取了沉睡於本部地下深處的巴耶爾。當他駕駛這台傳說中的鋼彈現身戰場時，整個組織的高層與士兵皆震懾於其威嚴，因為「只有被巴耶爾承認之人，才是格耶爾霍恩真正的主宰」。這種信仰根深蒂固，使得巴耶爾不僅是一台兵器，更是一種「權力的化身」。<br><br>
+            巴耶爾的設計延續了厄祭戰爭時代的「阿賴耶識系統」，具備卓越的反應速度與近戰性能。其最大特色是背部展開的雙翼狀推進器與兩把專屬兵裝——巴耶爾之劍（Bael Sword）。這對藍白色長劍象徵著天與地的審判，使巴耶爾在戰場上以迅雷之勢斬裂敵陣。儘管它沒有搭載現代化重火器，但在高手駕馭下仍能以純粹的速度與劍技壓制一切對手。<br><br>
+            最終，巴耶爾成為了理想與野心交錯的象徵。麥吉利斯企圖以它重現阿格尼卡的榮光，卻終究被現實與人心背叛。當巴耶爾孤獨地立於殘破的戰場時，它不再是勝利的象徵，而是一段被權力與信仰扭曲的悲劇——一如鐵血之名，榮光終將染上鮮紅。
+        </div>
+
+    </div>
+</div>
+<div id="gushion-section" class="w3-container" style="margin-top:70px; display:none;">
+    <div class="bael-flex">
+        <img src="gusion.jpg" class="w3-image bael-img" style="margin-bottom:0;">
+        <div class="c04y4wu3" style="background:rgba(34,34,34,0.85); border-radius:18px; padding:32px 28px 24px 28px; color:#f5f5f5; font-size:1.18em; line-height:1.9; font-family:'Noto Sans TC','Microsoft JhengHei',Arial,sans-serif; box-shadow:0 4px 24px rgba(0,0,0,0.18);">
+            <b style="font-size:1.35em; color:#8B0000; letter-spacing:1px; font-family:'FangSong','SimFang',serif;">鋼彈・智魔（Gundam Gusion）</b>是《鐵血的孤兒》（機動戰士GUNDAM: IRON-BLOODED ORPHANS）中以壓倒性防禦力與怪力著稱的鋼彈框架機體。它是厄祭戰爭時期殘留下來的72台鋼彈之一，搭載雙Ahab反應爐，擁有遠超一般量產機的能量輸出與耐久性能。其獨特的外觀與戰鬥方式，使它在眾多鋼彈中格外引人注目。<br><br>
+            最初由「布魯克·克拉克」所屬的太空海賊團「布魯克團」駕駛，外形笨重圓潤，猶如一頭裝甲蟲，綠色外殼與厚重裝甲是其鮮明特徵。這種設計雖與傳統鋼彈形象相去甚遠，卻完美體現其戰鬥風格——以壓倒性防禦力和近身破壞力橫掃戰場。智魔使用巨大錘槌作為主武裝，能輕易粉碎敵方裝甲，是純粹為近戰而生的鋼鐵巨獸。<br><br>
+            中期被鐵華團奪取後，由「秋史·巴拉」改修為「鋼彈智魔・重擊型（Gundam Gusion Rebake）」。改修後機體保持強韌防禦力，並新增多種感測系統與靈活戰術機能，展現截然不同的戰鬥姿態。秋史透過阿賽姆神經接續系統，能精準掌握戰場狀況，以冷靜判斷發揮智魔最大性能，成為鐵華團不可或缺的戰力之一。<br><br>
+            智魔象徵的不僅是力量，更代表「厚重的信念與守護的決心」。秋史駕駛它，並非為殺戮，而是為保護同伴、支撐鐵華團前行。那沉穩的綠色裝甲與堅毅戰姿，正如孤兒們在戰火中求生的意志——沉默、頑強、卻絕不倒下。鋼彈智魔，是本作最具象徵意義的「守護之鋼」。
+        </div>
+    </div>
+</div>
+<div id="marchosias-section" class="w3-container" style="margin-top:70px; display:none;">
+    <div class="bael-flex">
+        <img src="marchosias.jpg" class="w3-image bael-img" style="margin-bottom:0;">
+        <img src="hajiroboshi.jpg" class="w3-image bael-img" style="margin-bottom:0;">
+        <div class="c04y4wu3" style="background:rgba(34,34,34,0.85); border-radius:18px; padding:32px 28px 24px 28px; color:#f5f5f5; font-size:1.18em; line-height:1.9; font-family:'Noto Sans TC','Microsoft JhengHei',Arial,sans-serif; box-shadow:0 4px 24px rgba(0,0,0,0.18); min-width:220px; max-width:700px;">
+            <b style="font-size:1.35em; color:#8B0000; letter-spacing:1px; font-family:'FangSong','SimFang',serif;">鋼彈・翼魔（Gundam Marchosias）& 端白星（Gundam Hajiroboshi）</b><br>
+            在《機動戰士鋼彈 鐵血的孤兒》系列的世界中，鋼彈框架是「厄祭戰爭（Calamity War）」末期的遺產之一。於這場毀滅性的戰爭中，人類為了對抗自律兵器「無人機（Mobile Armor）」而製造了七十二台鋼彈框架機體。<b>鋼彈翼魔（Gundam Marchosias）與端白星（Gundam Hajiroboshi）</b>便是這傳說中的後裔，分別象徵著古老的榮耀與新時代的覺醒。<br><br>
+            鋼彈翼魔是以惡魔「Marchosias」命名的機體，編號為ASW-G-35。它是少數仍保留完整原始結構的鋼彈框架之一。翼魔以高機動格鬥戰見長，設有四臂構造，使其能同時操控多種近戰武器，包括「短劍型刀刃（Short Sword）」與「攻盾（Sub-Knuckle Guard）」等。其外觀以深灰與紅色為主調，給人一種兇猛而高貴的印象。翼魔的駕駛員是Kurth（庫爾特），曾屬「エンデュミオン」（Endymion）勢力，在厄祭戰爭期間展現出卓越的近戰能力。翼魔擁有高度反應力與極端操作性，但也對駕駛者的身體造成極大負擔，是能讓人感受到「鋼彈與人類共鳴的極限」的象徵性存在。<br><br>
+            與之形成對比的，是後世由火星殖民地「拉德恩公司（Radon Corporation）」修復的端白星（Gundam Hajiroboshi）。它是在《鐵血的孤兒 月鋼（Urdr-Hunt）》中登場的機體，編號ASW-G-XX。端白星的設計靈感源自於象徵純潔與希望的「白星」，外觀以白金與藍色為主，機體風格兼具流線與重裝感。它配備長矛型主武器「阿斯特蕾亞長矛」與盾型推進裝置「盾翼（Shield Binder）」，能在重力區與無重力空間中靈活戰鬥。駕駛者為Wistario Afam（維斯塔里奧‧阿法姆），一位身懷理想、出身貧困殖民地的青年。他繼承了「鐵華團」的精神，駕馭端白星在火星上掀起新的戰火與希望。<br><br>
+            鋼彈翼魔象徵過去的戰爭狂氣與榮耀，而端白星則象徵未來的繼承與變革。兩者一黑一白、一魔一星，在「鐵血的孤兒」世界觀中形成了強烈的對照——一方是歷史留下的惡夢，一方是新世代的希望之光。
+        </div>
+    </div>
+</div>
+
+<script>
+function showSection(section) {
+    document.getElementById('home-section').style.display = 'none';
+    document.getElementById('bael-section').style.display = (section === 'bael') ? 'block' : 'none';
+    document.getElementById('gushion-section').style.display = (section === 'gushion') ? 'block' : 'none';
+    document.getElementById('marchosias-section').style.display = (section === 'marchosias') ? 'block' : 'none';
+}
+function enterMain() {
+    document.getElementById('home-section').style.display = 'none';
+    showSection('bael');
+}
+// 預設只顯示首頁
+document.getElementById('home-section').style.display = 'block';
+document.getElementById('bael-section').style.display = 'none';
+document.getElementById('gushion-section').style.display = 'none';
+document.getElementById('marchosias-section').style.display = 'none';
+</script>
+</body>

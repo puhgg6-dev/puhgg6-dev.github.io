@@ -1,157 +1,157 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星空主題網頁</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-            overflow-x: hidden;
-        }
-        .stars {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 80px auto 0 auto;
-            background: rgba(30, 34, 54, 0.85);
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(30, 34, 54, 0.28);
-            padding: 48px 40px 36px 40px;
-            text-align: center;
-            border: 2px solid #3a4668;
-        }
-        .star-header {
-            font-size: 2.8em;
-            color: #fffbe7;
-            letter-spacing: 0.1em;
-            margin-bottom: 18px;
-            font-family: 'Noto Sans TC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: 0 2px 16px #fffbe7cc, 0 2px 8px #3a4668;
-        }
-        .star-divider {
-            width: 80px;
-            height: 6px;
-            background: linear-gradient(90deg, #fffbe7 0%, #3a4668 100%);
-            border-radius: 3px;
-            margin: 0 auto 32px auto;
-            box-shadow: 0 2px 8px #fffbe744;
-        }
-        .star-desc {
-            color: #e0e6f7;
-            font-size: 1.25em;
-            margin-bottom: 32px;
-            line-height: 1.8;
-        }
-        .star-btn {
-            display: inline-block;
-            padding: 14px 38px;
-            background: linear-gradient(90deg, #3a4668 0%, #fffbe7 100%);
-            color: #1b2735;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-family: 'Noto Sans TC', sans-serif;
-            cursor: pointer;
-            box-shadow: 0 4px 16px #fffbe744;
-            text-decoration: none;
-            transition: background 0.2s, box-shadow 0.2s;
-        }
-        .star-btn:hover {
-            background: linear-gradient(90deg, #fffbe7 0%, #3a4668 100%);
-            color: #fffbe7;
-            box-shadow: 0 6px 24px #fffbe744;
-        }
-        .star-footer {
-            margin-top: 48px;
-            color: #fffbe7;
-            font-size: 1em;
-            opacity: 0.7;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <canvas class="stars"></canvas>
-    <div class="container">
-        <div class="star-header">星空主題網頁</div>
-        <div class="star-divider"></div>
-        <div class="star-desc">
-            這是一個以星空為主題、充滿夢幻感的網頁範例。<br>
-            適合用於展示創意、品牌形象或個人作品集。<br>
-            你可以根據需求進一步自訂內容與功能。
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>111415002</title>
+    <!--1-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!--2-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--導覽-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-        <a href="#" class="star-btn">立即探索</a>
-        <div class="star-footer">&copy; 2025 星空主題網頁設計 | 由 GitHub Copilot 生成</div>
+      </div>
+    </nav>
+
+    <!--BANNER-->
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="SKY.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="SKY1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="SKY2.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <script>
-        // 星空動畫
-        const canvas = document.querySelector('.stars');
-        const ctx = canvas.getContext('2d');
-        let w, h, stars = [];
-        function resize() {
-            w = window.innerWidth;
-            h = window.innerHeight;
-            canvas.width = w;
-            canvas.height = h;
-        }
-        function Star() {
-            this.x = Math.random() * w;
-            this.y = Math.random() * h;
-            this.radius = Math.random() * 1.2 + 0.2;
-            this.alpha = Math.random() * 0.5 + 0.5;
-            this.dx = (Math.random() - 0.5) * 0.05;
-            this.dy = (Math.random() - 0.5) * 0.05;
-        }
-        Star.prototype.draw = function() {
-            ctx.save();
-            ctx.globalAlpha = this.alpha;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-            ctx.fillStyle = '#fffbe7';
-            ctx.shadowColor = '#fffbe7';
-            ctx.shadowBlur = 8;
-            ctx.fill();
-            ctx.restore();
-        };
-        Star.prototype.update = function() {
-            this.x += this.dx;
-            this.y += this.dy;
-            if(this.x < 0 || this.x > w) this.dx *= -1;
-            if(this.y < 0 || this.y > h) this.dy *= -1;
-        };
-        function createStars(num) {
-            stars = [];
-            for(let i=0; i<num; i++) {
-                stars.push(new Star());
-            }
-        }
-        function animate() {
-            ctx.clearRect(0, 0, w, h);
-            for(let star of stars) {
-                star.update();
-                star.draw();
-            }
-            requestAnimationFrame(animate);
-        }
-        window.addEventListener('resize', () => {
-            resize();
-            createStars(Math.floor(w * h / 1800));
-        });
-        resize();
-        createStars(Math.floor(w * h / 1800));
-        animate();
-    </script>
-</body>
+
+    <!--主要-->
+    <div class="card" style="width: 18rem">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+  </body>
 </html>

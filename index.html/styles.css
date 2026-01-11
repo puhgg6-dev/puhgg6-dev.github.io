@@ -171,6 +171,28 @@ body{
 }
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 
+/* Result Link */
+.result-link {
+	display: block;
+	margin: 1em auto 0 auto;
+	width: fit-content;
+	padding: 0.5em 1.5em;
+	border-radius: 2em;
+	background: #e0c9a6;
+	color: #4e3c1e;
+	font-family: 'Libre Baskerville', 'Noto Sans TC', serif;
+	font-size: 1.1em;
+	font-weight: 700;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	box-shadow: 0 2px 8px rgba(78,60,30,0.08);
+	transition: background 0.2s, color 0.2s;
+}
+.result-link:hover {
+	background: #c2a477;
+	color: #fff;
+}
+
 /* Responsive */
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}
@@ -184,4 +206,19 @@ body{
   .hero h1{font-size:28px}
   .lead{font-size:15px}
   .footer-inner{flex-direction:column;gap:8px}
+}
+
+.gain .card {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.learning .grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2em;
+}
+.learning-card {
+	width: 100%;
+	box-sizing: border-box;
 }

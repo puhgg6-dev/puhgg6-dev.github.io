@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>網站設計&賞析</title>
+	<link rel="stylesheet" href="styles.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap"
+		rel="stylesheet">
+	<style>
+		/* ...existing code... */
+		h1,
+		h2,
+		h3 {
+			color: #fff;
+			font-weight: 700;
+			margin-top: 1.2em;
+			margin-bottom: 0.6em;
+		}
+
+		.section h2 {
+			margin-top: 1.5em;
+			margin-bottom: 0.8em;
+		}
+
+		.card h3 {
+			margin-top: 1em;
+			margin-bottom: 0.5em;
+		}
+		/* ...existing code... */
+	</style>
+</head>
+
+<body>
+	<!--headline-->
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand"> 網站設計&賞析</div>
+			<nav class="nav">
+				<a href="#learning">學習</a>
+				<a href="#result">成果</a>
+				<a href="#gain">收穫</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero wood-bg" id="headline" style="position:relative; overflow:hidden;">
+			<!-- 背景圖層 -->
+			<div style="
+			position:absolute;
+			inset:0;
+			z-index:0;
+			background: rgba(24,24,24,0.6);
+			">
+				<img src="g1.jpg" alt="背景圖" style="
+				width:100%;
+				height:100%;
+				object-fit:cover;
+				opacity:0.35;
+				mix-blend-mode: darken;
+				position:absolute;
+				inset:0;
+				z-index:-1;
+			">
+			</div>
+			<div class="container hero-inner" style="position:relative; z-index:1;">
+				<h1>我的學期集大成</h1>
+				<p class="lead">藝一乙 蔡孟光
+					111415002
+				</p>
+			</div>
+		</section>
+
+		<!--learning-->
+
+		<section id="learning" class="container section learning">
+			<h2>學習歷程</h2>
+			<p></p>
+			<div class="grid">
+				<article class="card learning-card">
+					<h3>AI應用</h3>
+					<p>因為是二階選課才成功選到了這一堂課，所以我初次上課有些緊張，還好是從比較基礎的地方:關於AI工具的應用。首先是製作由照片轉換的人物公仔模型，需要輸入老師給予的指令進而投射出想要製作的公仔，因為想試試功能性，回家後仍有進一步拿照片測試。而後在進行vscode的過程中，老師教我們能同時使用github
+						copilot chat AI和Bootstrap等程式碼工具寫網站，對我之後的成果都有極大的幫助。</p>
+				</article>
+				<article class="card learning-card">
+					<h3>改變設計工具
+					</h3>
+					<p>在工具的使用上，課程由使用協作頻台逐漸轉換成使用vscode。和淺顯易懂簡單操作的Google協作平台不同，vscode是這堂課我們真的需要更了解程式碼的開始，他帶入了內建AI協作的設計方式，同時學習由bootstrap和W3School所列出的程式碼，讓我們進一步熟悉製作網站，其中的自製網站以及期末的成果網站便是使用vscode功能並集合滿意作品製作而成的。
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<!--result-->
+
+		<section id="result" class="container section result">
+			<h2>成果展示</h2>
+			<div class="grid">
+
+
+
+				<article class="card">
+					<img src="P5.jpg" alt="我的簡介"
+						style="width:220px;height:150px;object-fit:cover;display:block;margin:0 auto 1em;">
+					<h3>表關於我</h3>
+					<p>第一次上課，藉由較為操作簡單的Google協作平台，練習初步的網站製作
+					</p>
+					<a href="https://sites.google.com/stu.ntue.edu.tw/puhgg6101203303/%E9%A6%96%E9%A0%81"
+						class="result-link" target="_blank">查看作品</a>
+				</article>
+				<article class="card">
+					<img src="P4.jpg" alt="我的簡介"
+						style="width:220px;height:150px;object-fit:cover;display:block;margin:0 auto 1em;">
+					<h3>表格練習</h3>
+					<p>參考老師的範例練習了表格不同的呈現方式，比如說格子的區分或合併去對應不同照片
+					</p>
+					<a href="https://puhgg6-dev.github.io/1007/" class="result-link" target="_blank">查看作品</a>
+				</article>
+				<article class="card">
+					<img src="P3.jpg" alt="我的簡介"
+						style="width:220px;height:150px;object-fit:cover;display:block;margin:0 auto 1em;">
+					<h3>我的簡歷</h3>
+					<p>依照課堂上老師的指導，製作了關於自我簡介的簡歷小卡，進一步了解使用vscode
+					</p>
+					<a href="https://puhgg6-dev.github.io/1014/" class="result-link" target="_blank">查看作品</a>
+				</article>
+				<article class="card">
+					<img src="P2.jpg" alt="國北教大地圖"
+						style="width:220px;height:150px;object-fit:cover;display:block;margin:0 auto 1em;">
+					<h3>國北教大地圖</h3>
+					<p>用標明地理位置的方式，讓使用者能知道國北教大位置的同時，更了解周邊的位置配置</p>
+					<a href="https://puhgg6-dev.github.io/1021/" class="result-link" target="_blank">查看作品</a>
+				</article>
+				<article class="card">
+					<img src="P1.jpg" alt="鐵血的孤兒鋼彈"
+						style="width:220px;height:150px;object-fit:cover;display:block;margin:0 auto 1em;">
+					<h3>期中自由主題</h3>
+					<p>挑選三架具辨識度的系列作品鋼彈，用簡介讓人對這部作品登場的機體有更深的認識</p>
+					<a href="https://puhgg6-dev.github.io/1028/" class="result-link" target="_blank">查看作品</a>
+				</article>
+				<article class="card">
+					<img src="P6.jpg" alt="我的簡介"
+						style="width:220px;height:150px;object-fit:cover;display:block;margin:0 auto 1em;">
+					<h3>耶晚宣傳</h3>
+					<p>期末作業前的小組合作，是最後的複習，將學校晚會宣傳精緻化成美觀易懂的網站
+					</p>
+					<a href="https://sites.google.com/stu.ntue.edu.tw/130/%E9%A6%96%E9%A0%81" class="result-link"
+						target="_blank">查看作品</a>
+				</article>
+			</div>
+		</section>
+
+		<!--gain-->
+
+		<section id="gain" class="container section gain">
+			<h2>課程總結</h2>
+			<article class="card">
+				<h3>我的收穫</h3>
+				<p>作為選擇了藝術造型與設計學系的學生，因為堅信網站設計對我的出路一定會有不小的幫助，所以選擇了這一堂課，雖然有不安和焦慮，但對於身處於AI進步快速之時代的我們而言，網站設計變得不再同從前那麼的複雜，同時證明了AI的恐怖以及實用，希望以後能不被AI完全取代，盡量用自己的想法設計出抓人眼球的網站。
+				</p>
+			</article>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+			<div style="display: flex; align-items: center;">
+				<a href="https://www.instagram.com/puhgg6/" target="_blank">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+				<a href="https://www.facebook.com/profile.php?id=100034735872757&locale=zh_TW" target="_blank">
+					<i class="fa-brands fa-facebook"></i>
+				</a>
+			</div>
+			<style>
+				a {
+					text-decoration: none;
+					font-size: 20px;
+					margin-right: 16px;
+					color: inherit;
+				}
+
+				.fa-instagram {
+					color: #E4405F;
+				}
+
+				.fa-facebook {
+					color: #1877F2;
+				}
+			</style>
+		</div>
+	</footer>
+</body>
+
+</html>
